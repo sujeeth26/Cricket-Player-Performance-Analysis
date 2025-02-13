@@ -1,63 +1,148 @@
-# Analysis of T20 Cricket Player Performance
+Predicting T20 Cricket player Performance Using Machine Learning
 
-## Project Overview
-This project analyzes T20 cricket player performance using data-driven insights and machine learning. The goal is to extract patterns, predict performance, and assist team management in strategic planning and decision-making.
+Overview
 
-### Objectives
-- Conduct statistical analysis on batting, bowling, and fielding performance.
-- Clean and preprocess raw data for better analysis.
-- Apply machine learning techniques for player classification and performance prediction.
-- Use feature engineering to enhance performance metrics.
-- Provide actionable insights for team selection and game strategy.
+This project utilizes supervised and unsupervised learning algorithms to analyze cricket batting and bowling performances using T20 cricket data. It includes:
 
-## Data
-- **Source**: Kaggle and other reputable cricket databases.
-- **Features**: Batting stats, bowling stats, fielding records, match outcomes, and player demographics.
-- **Preprocessing**:
-  - Handle missing values and standardize data.
-  - Remove redundant or irrelevant columns.
-  - Perform feature selection using statistical methods.
+Exploratory Data Analysis (EDA)
 
-## Methodology
-- **Supervised Learning**:
-  - Decision Tree for predicting bowler performance.
-  - Logistic Regression for batting performance classification.
-- **Unsupervised Learning**:
-  - K-Means Clustering for player segmentation.
-- **Feature Engineering**:
-  - Weighted averages for enhanced performance measurement.
-- **Advanced Analysis**:
-  - Linear Regression for batting performance trends.
-  - Decision Tree Regression for bowling efficiency.
+Feature Engineering
 
-## Results
-- **Best Performing Models**: Decision Tree and Logistic Regression.
-- **Insights**:
-  - Identified key performance metrics affecting batting and bowling outcomes.
-  - Clustered players into distinct performance categories for strategic selection.
-- **Visualizations**:
-  - Heatmaps, scatter plots, and bar charts to interpret player strengths and weaknesses.
+Supervised Learning (Linear Regression, Logistic Regression, Decision Tree Classifier)
 
-## How to Use
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-repo/t20-cricket-analysis.git
-   ```
-2. Install dependencies:
-   ```sh
-   pip install -r requirements.txt
-   ```
-3. Run the analysis:
-   ```sh
-   python analysis.py
-   ```
+Unsupervised Learning (K-Means Clustering)
 
+Performance Evaluation and Visualization
 
+Dataset
 
-## References
-- [Kaggle Cricket Datasets](https://www.kaggle.com/)
-- [Scikit-learn Documentation](https://scikit-learn.org/)
-- [Pandas Documentation](https://pandas.pydata.org/)
+The project uses two datasets:
 
----
+t20.csv - Contains batting statistics (Runs, Balls Faced, Strike Rate, etc.)
+
+Bowling_t20.csv - Contains bowling statistics (Wickets, Economy Rate, etc.)
+
+Methodology
+
+1. Data Preprocessing & EDA
+
+Data is cleaned and missing values are handled.
+
+Numeric conversions are performed where necessary.
+
+Feature selection is done for relevant variables.
+
+Exploratory Data Analysis (EDA) visualizes distributions, trends, and correlations.
+
+2. Supervised Learning Algorithms
+
+Linear Regression (For Batting Performance Prediction)
+
+Predicts batting average based on Runs, Balls Faced, and Strike Rate.
+
+Top batsmen are identified based on predicted averages and strike rates.
+
+Visualization: Bar charts for top batsmen by predicted average and strike rate.
+
+Logistic Regression (Classifying High-Performance Batsmen)
+
+Defines high-performing batsmen as those with an average >= 30.
+
+Accuracy: Evaluated using test data.
+
+Top 10 batsmen by strike rate displayed.
+
+Decision Tree Classifier (For Bowling Performance)
+
+Predicts whether a bowler is a high wicket-taker based on economy rate, average, and strike rate.
+
+Confusion matrix & classification report generated for performance evaluation.
+
+Decision tree visualization helps in understanding model decisions.
+
+Top 6 bowlers identified based on their probability of being a high wicket-taker.
+
+3. Unsupervised Learning Algorithm
+
+K-Means Clustering (Grouping Players Based on Performance)
+
+Players are clustered based on Runs, Balls Faced, Sixes, and Strike Rate.
+
+Optimal clusters identified using inertia and silhouette score.
+
+Pair plots used for cluster visualization.
+
+Cluster centroids analyzed to identify player groups.
+
+Results & Performance Evaluation
+
+Linear Regression Results
+
+The model predicts batting averages effectively.
+
+Top 10 batsmen by predicted average and strike rate are displayed in a bar chart.
+
+Logistic Regression Results
+
+Achieves good accuracy in classifying high-performance batsmen.
+
+The accuracy score is displayed in percentage format.
+
+Top batsmen by strike rate are shown in tabular format.
+
+Decision Tree Classifier Results
+
+The model identifies high wicket-taking bowlers with good precision.
+
+Confusion matrix & classification report provide insights into model performance.
+
+A decision tree plot visualizes model decisions.
+
+Top 6 bowlers based on probability are listed.
+
+K-Means Clustering Results
+
+The model successfully groups players into 4 performance-based clusters.
+
+Silhouette Score evaluates clustering effectiveness.
+
+Pair plots visualize player clusters.
+
+Cluster centroids provide insights into typical player performance in each cluster.
+
+Visualizations
+
+Bar charts for top batsmen by predicted average and strike rate.
+
+Bar chart for top 6 bowlers by high wicket-taking probability.
+
+Bar chart for silhouette score evaluation in K-Means clustering.
+
+Decision tree plot for bowler classification.
+
+Confusion matrix and classification report for decision tree performance.
+
+Pair plot for K-Means clusters.
+
+Conclusion
+
+Linear Regression effectively predicts batting averages.
+
+Logistic Regression classifies high-performing batsmen with good accuracy.
+
+Decision Tree Classifier successfully identifies top-performing bowlers.
+
+K-Means Clustering groups players into meaningful clusters.
+
+Feature Engineering improves model performance.
+
+The project provides data-driven insights into cricket performance, valuable for selectors, analysts, and fantasy leagues.
+
+Future Scope
+
+Integrate more advanced ML models (Random Forest, XGBoost, Neural Networks).
+
+Incorporate real-time cricket data streaming for dynamic analysis.
+
+Build a Streamlit Web App for interactive visualizations and predictions.
 
