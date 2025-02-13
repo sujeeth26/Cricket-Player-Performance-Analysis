@@ -82,6 +82,6 @@ We analyzed key performance indicators using visualization techniques:
     ```bash
     python T20.py
     ```
-4. View the generated graphs and model results.
+
 
 
